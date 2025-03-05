@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import HotelsList from './components/HotelsList';
+import HotelsContainer from './containers/HotelsContainer';
 
 function App() {
   return (
     <div className="App">
-      <HotelsList />
+      <HotelsContainer />
     </div>
   );
 }

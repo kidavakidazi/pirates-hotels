@@ -8,6 +8,9 @@ export const GET_HOTELS = gql`
                 rating
                 price
                 country
+                description {
+                    json
+                }
                 city
                 startDate
                 endDate
@@ -29,7 +32,7 @@ export const GET_HOTELS = gql`
 
 export const GET_REVIEWS = gql`
     query GetReviews($hotelId: String!) {
-        reviewCollection(where: { hotelId: $hotelId } limit: 3) {
+        reviewCollection(where: { hotel: { sys: { id: $hotelId } } }, limit: 3) {
             items {
                 customer {
                     firstName
