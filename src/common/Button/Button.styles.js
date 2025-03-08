@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 const spin = keyframes`
   0% { transform: rotate(0deg); }
@@ -28,6 +28,8 @@ export const StyledButton = styled.button`
     background: #ccc;
     cursor: not-allowed;
   }
+
+  ${({ customCss }) => customCss && css`${customCss}`}
 `;
 
 export const LoadingSpinner = styled.div`

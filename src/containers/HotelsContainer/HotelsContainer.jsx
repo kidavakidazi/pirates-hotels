@@ -3,6 +3,7 @@ import { useHotels } from "../../hooks/useHotels";
 import { useReviews } from "../../hooks/useReviews";
 import HotelsList from "../../components/HotelsList/HotelsList";
 import Button from '../../common/Button';
+import { css } from "styled-components";
 
 const HotelsContainer = () => {
   const { fetchHotels, hotelsLoading, hotelsError, hotels } = useHotels();
@@ -14,7 +15,12 @@ const HotelsContainer = () => {
 
   return (
     <>
-      <Button onClick={() => fetchHotels()} disabled={hotelsLoading} loading={hotelsLoading} >
+      <Button
+        onClick={() => fetchHotels()}
+        disabled={hotelsLoading}
+        loading={hotelsLoading}
+        customCss={css`margin: 24px auto;`}
+      >
         "Load Hotels"
       </Button>
       <HotelsList

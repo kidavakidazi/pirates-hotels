@@ -1,10 +1,10 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "***REMOVED***",
+  uri: process.env.REACT_APP_GRAPHQL_URI,
   cache: new InMemoryCache(),
   headers: {
-    Authorization: `Bearer ***REMOVED***`,
+    Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL_TOKEN}`,
   },
 });
 
