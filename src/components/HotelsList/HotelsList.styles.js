@@ -22,7 +22,7 @@ export const ImageAndInfo = styled.div`
 
 export const Image = styled.img`
     width: 300px;
-    height: 200px;
+    height: 225px;
     object-fit: cover;
     border-radius: 10px;
 `;
@@ -31,15 +31,38 @@ export const HotelInfo = styled.div`
     flex: 1;
 `;
 
+export const HotelInfoHeader = styled.div`
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+`;
+
+export const DescriptionContent = styled.div`
+    font-size: 16px;
+`
+
 export const Actions = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 `;
 
+export const PriceDate = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+`;
+
 export const Price = styled.span`
     font-weight: bold;
     color: #0073e6;
+`;
+
+export const DateInfo = styled.div`
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
 `;
 
 export const Reviews = styled.div`

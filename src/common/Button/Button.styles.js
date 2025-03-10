@@ -29,7 +29,7 @@ export const StyledButton = styled.button`
     cursor: not-allowed;
   }
 
-  ${({ customCss }) => customCss && css`${customCss}`}
+  ${({ customcss }) => customcss && css`${customcss}`}
 `;
 
 export const LoadingSpinner = styled.div`

@@ -5,10 +5,10 @@ import { parseDescription } from '../../utils/helpers';
 const Review = ({ review }) => {
   return (
     <ReviewContainer>
-      <FeedbackIndicator feedback={review.feedback} />
+      <FeedbackIndicator feedback={review?.feedback} />
       <ReviewContent>
-        <strong>{review.customer.firstName} {review.customer.lastName}</strong>
-          <p>{parseDescription(review.comment.json)}</p>
+        <strong>{review?.customer?.firstName} {review?.customer?.lastName}</strong>
+          <p>{parseDescription(review?.comment?.json)}</p>
       </ReviewContent>
     </ReviewContainer>
   );
