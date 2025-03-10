@@ -66,7 +66,6 @@ export const DateInfo = styled.div`
 `;
 
 export const Reviews = styled.ul`
-  width: 100%;
   padding: 15px;
   background: #f1f1f1;
   border-top: 1px solid #ddd;
