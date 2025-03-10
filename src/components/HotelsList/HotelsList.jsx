@@ -24,7 +24,7 @@ const HotelsList = ({ hotels, hotelReviews, reviewsLoading, expandedHotels, getH
     <Container>
       {hotels?.map((hotel) => {
         const isExpanded = expandedHotels?.includes(hotel?.sys?.id)
-        const reviews = hotelReviews?.length ? hotelReviews[hotel?.sys?.id] : [];
+        const reviews = hotelReviews?.[hotel?.sys?.id] ?? [];
 
         return (
           <HotelCard key={hotel.sys.id}>
