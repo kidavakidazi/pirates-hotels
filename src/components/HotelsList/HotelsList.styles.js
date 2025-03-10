@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section`
     padding: 20px;
 `;
 
-export const HotelCard = styled.div`
+export const HotelCard = styled.article`
     display: flex;
     flex-direction: column;
     background: #f9f9f9;
@@ -31,7 +31,7 @@ export const HotelInfo = styled.div`
     flex: 1;
 `;
 
-export const HotelInfoHeader = styled.div`
+export const HotelInfoHeader = styled.header`
     display: flex;
     align-items: stretch;
     justify-content: space-between;

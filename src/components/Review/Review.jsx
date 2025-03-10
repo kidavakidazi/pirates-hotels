@@ -7,7 +7,9 @@ const Review = ({ review }) => {
     <ReviewContainer>
       <FeedbackIndicator feedback={review?.feedback} />
       <ReviewContent>
-        <strong>{review?.customer?.firstName} {review?.customer?.lastName}</strong>
+        <header>
+          <strong>{review?.customer?.firstName} {review?.customer?.lastName}</strong>
+        </header>
           <p>{parseDescription(review?.comment?.json)}</p>
       </ReviewContent>
     </ReviewContainer>

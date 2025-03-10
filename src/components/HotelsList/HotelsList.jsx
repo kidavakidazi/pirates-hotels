@@ -4,14 +4,14 @@ import {
   HotelCard,
   Image,
   HotelInfo,
-  HotelInfoHeader,
   Actions,
   PriceDate,
   Reviews,
   Price,
   ImageAndInfo,
   DescriptionContent,
-  DateInfo
+  DateInfo,
+  HotelInfoHeader
 } from "./HotelsList.styles";
 import Button from "../../common/Button/Button";
 import Review from "../Review/Review";
@@ -55,10 +55,15 @@ const HotelsList = ({ hotels, hotelReviews, reviewsLoading, expandedHotels, getH
             </ImageAndInfo>
             {isExpanded && (
               <Reviews>
-                {reviewsLoading ? <p>Loading reviews...</p> :
-                  reviews?.length ? reviews.map((review) => (
+                {reviewsLoading ? (
+                  <p>Loading reviews...</p>
+                ) : reviews?.length ? (
+                  reviews.map((review) => (
                     <Review key={review.sys?.id} review={review} />
-                  )) : <p>No reviews available.</p>}
+                  ))
+                ) : (
+                  <p>No reviews available.</p>
+                )}
               </Reviews>
             )}
           </HotelCard>
