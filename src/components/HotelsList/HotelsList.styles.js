@@ -65,7 +65,7 @@ export const DateInfo = styled.div`
   margin-top: 8px;
 `;
 
-export const Reviews = styled.div`
+export const Reviews = styled.ul`
   width: 100%;
   padding: 15px;
   background: #f1f1f1;

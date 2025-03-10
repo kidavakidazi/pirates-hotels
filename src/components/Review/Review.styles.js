@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ReviewContainer = styled.div`
+export const ReviewContainer = styled.li`
     display: flex;
     align-items: center;
     margin: 10px 0;
