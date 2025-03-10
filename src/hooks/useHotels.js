@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export const useHotels = () => {
   const [fetchHotels, { loading: hotelsLoading, error: hotelsError, data: hotelsData }] = useLazyQuery(GET_HOTELS);
-  const [fetchReviews, { loading, error, data }] = useLazyQuery(GET_REVIEWS);
+  const [fetchReviews, { loading, error }] = useLazyQuery(GET_REVIEWS);
   const [expandedHotels, setExpandedHotels] = useState([]);
   const [hotelReviews, setHotelReviews] = useState({});
 
